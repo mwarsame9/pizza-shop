@@ -1,12 +1,17 @@
 // --Back end logic--
 
-function Order(pizzaSize, meatTopping, nonMeatTopping, customerOrder) {
+// function Order(pizzaSize, meatTopping, nonMeatTopping, customerOrder) {
+//   this.pizzaSize = pizzaSize;
+//   this.meatTopping = meatTopping;
+//   this.nonMeatTopping = nonMeatTopping;
+//   this.customerOrder = [];
+// }
+
+function Order(pizzaSize, pizzatoppings, customerOrder) {
   this.pizzaSize = pizzaSize;
-  this.meatTopping = meatTopping;
-  this.nonMeatTopping = nonMeatTopping;
+  this.pizzatoppings = pizzatoppings;
   this.customerOrder = [];
 }
-
 
 function Pizza(size, toppings) {
   this.pizzaToppings = [];
@@ -29,6 +34,25 @@ Pizza.prototype.toppingsCost = function() {
 
 var pizzaOrder = new Order();
 
+// Order.prototype.pizzaPrize = function (pizza) {
+//   if (this.pizzaSize !== "Large") {
+//     this.cost -=  2;
+//   } else {
+//     this.cost;
+//   }
+//   if (this.meatTopping !== "Steak"){
+//     this.cost -=  5;
+//   } else {
+//     this.cost;
+//   }
+//   if (this.nonMeatTopping !== "Cheese"){
+//    this.cost -=  5;
+//   } else {
+//     this.cost;
+//   }
+//   console.log(this.cost);
+// };
+
 
 // --Front end Logic--
 $("document").ready(function() {
@@ -40,7 +64,7 @@ $("document").ready(function() {
     var pizzasize = $("select#pizzasize").val();
     var newpizza = new Pizza(pizzasize);
 
-    $("input:checkbox[name=pizza-toppings]:checked").each(function() {
+    $("input:checkbox[name=pizzatoppings]:checked").each(function() {
       var newtoppings = $(this).val();
       newpizza.pizzaToppings.push(newtoppings);
     });
