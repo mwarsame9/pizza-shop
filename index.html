@@ -8,52 +8,29 @@
     <title>Pizza Joint</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Mo's Pizza Joint</h1>
-      <div class="row">
-        <div class="col-md-6">
-          <form id="form-one" >
-            <div class="size">
-              <label for="size">Select your pizza size:</label>
-              <select class="form-control pizzaSize">
-                <option selected="selected" disabled>Pizza Size</option>
-                <option value="59 and under" class="noDiscount">Small</option>
-                <option value="60 and over">Medium</option>
-                <option value="60 and over">Large</option>
-              </select>
-            </div>
-              <div class="meats">
-                <label for="meats">Meat toppings:</label>
-                <select class="form-control meatToppings">
-                  <option selected="selected" disabled>Meat Toppings</option>
-                  <option value="Steak">Steak</option>
-                  <option value="Chicken">Chicken</option>
-                  <option value="Beef">Beef</option>
-                  <option value="Ham">Ham</option>
-                  <option value="Sausage">Sausage</option>
-                </select>
-              </div>
-              <div class="nonMeats">
-                <label for="nonMeats">Non meat toppings:</label>
-                <select class="form-control nonMeatToppings">
-                  <option selected="selected" disabled>Start Time</option>
-                  <option value="Cheese">Cheese</option>
-                  <option value="Pineapple">Pineapple</option>
-                  <option value="Tomatoes">Tomatoes</option>
-                  <option value="Onions">Onions</option>
-                  <option value="Veggies">Veggies</option>
-                </select>
-              </div>
-            <hr>
-            <button type="submit" name="submit-button" class="btn">Submit</button>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <ul id="output"></ul>
-          <div id="output2">
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+     <div class="col-sm-4 addtoppings">
+       <h1>Mo's Pizza Joint</h1>
+        <select class="form-control pizzaSize">
+          <option selected="selected" disabled>Pizza Size</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+        </select>
+        <br>
+       <input type="checkbox" name="pizza-toppings" value="Chicken"> Chicken<br>
+       <input type="checkbox" name="pizza-toppings" value="Steak"> Steak<br>
+       <input type="checkbox" name="pizza-toppings" value="Beef"> Beef<br>
+       <input type="checkbox" name="pizza-toppings" value="Hawaiian"> Hawaiian<br>
+       <input type="checkbox" name="pizza-toppings" value="Veggies"> Veggies<br>
+       <input type="checkbox" name="pizza-toppings" value="Pineapple"> Pineapple<br>
+       <input type="checkbox" name="pizza-toppings" value="Mushrooms"> Mushrooms<br>
+       <hr>
+       <button id="submit" type="button">Order</button>
+     </div>
+
+     <div id="totalDue" class="col-sm-4">
+
+
+     </div>
+</body>
 </html>
