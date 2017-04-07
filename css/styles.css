@@ -1,3 +1,23 @@
 #order {
   display: none;
 }
+
+body {
+  font-family: 'Fredericka the Great', cursive;
+  background-color: #2C2023;
+  color: #F47F38;
+}
+
+.jumbotron {
+  font-family: 'Monoton', cursive;
+  background-color: #010F1E;
+}
+
+.pizzaSize {
+  color: black;
+  background-color: gray;
+}
+
+#submit {
+  color: black;
+}
