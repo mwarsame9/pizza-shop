@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.0.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Mo's Corner Pizza</title>
+    <title>Pizza Joint</title>
   </head>
   <body>
     <div class="container">
+      <h1>Mo's Pizza Joint</h1>
       <div class="row">
-        <div class="col-md-12">
-          <div class="jumbotron">
-            <h1>Mo's Corner Pizza</h1>
+        <div class="col-md-6">
+          <form id="form-one" >
+            <div class="size">
+              <label for="size">Select your pizza size:</label>
+              <select class="form-control pizzaSize">
+                <option selected="selected" disabled>Pizza Size</option>
+                <option value="59 and under" class="noDiscount">Small</option>
+                <option value="60 and over">Medium</option>
+                <option value="60 and over">Large</option>
+              </select>
+            </div>
+              <div class="meats">
+                <label for="meats">Meat toppings:</label>
+                <select class="form-control meatToppings">
+                  <option selected="selected" disabled>Meat Toppings</option>
+                  <option value="Steak">Steak</option>
+                  <option value="Chicken">Chicken</option>
+                  <option value="Beef">Beef</option>
+                  <option value="Ham">Ham</option>
+                  <option value="Sausage">Sausage</option>
+                </select>
+              </div>
+              <div class="nonMeats">
+                <label for="nonMeats">Non meat toppings:</label>
+                <select class="form-control nonMeatToppings">
+                  <option selected="selected" disabled>Start Time</option>
+                  <option value="Cheese">Cheese</option>
+                  <option value="Pineapple">Pineapple</option>
+                  <option value="Tomatoes">Tomatoes</option>
+                  <option value="Onions">Onions</option>
+                  <option value="Veggies">Veggies</option>
+                </select>
+              </div>
+            <hr>
+            <button type="submit" name="submit-button" class="btn">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <ul id="output"></ul>
+          <div id="output2">
           </div>
         </div>
-            <select id="pizzaSize" name="">
-              <option selected="selected" disabled>Choose pizza size:</option>
-              <option value="Small">Small</option>
-              <option value="Medium">Medium</option>
-              <option value="Large">Large</option>
-            </select>
-            <br>
-            <br>
-          <div class="toppings">
-            <p>Choose toppings:</p>
-            <input type="checkbox" name="toppings" value="2"> Cheese<br>
-            <input type="checkbox" name="toppings" value="2"> Veggies<br>
-            <input type="checkbox" name="toppings" value="2"> Pineapple<br>
-            <input type="checkbox" name="toppings" value="2"> Mushrooms<br>
-            <input type="checkbox" name="toppings" value="2"> Chicken<br>
-            <input type="checkbox" name="toppings" value="2"> Steak<br>
-            <input type="checkbox" name="toppings" value="2"> Beef<br>
-          </div>
-          <hr>
-          <button type="submit">Order</button>
-
-        <span id="order">
-        <p><b>You ordered the following food:</b></p>
-      </span>
       </div>
     </div>
   </body>
